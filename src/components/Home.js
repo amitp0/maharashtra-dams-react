@@ -4,7 +4,7 @@ import Search from "./Search";
 function Home(){
     return(<>
     <Helmet>
-        <title>Home</title>
+        <title>Maharashtra Dams - maharashtra-dams.web.app</title>
     </Helmet>
 
     <div className="flex flex-row flex-wrap pt-16 pl-24 dark:bg-slate-900 h-screen">

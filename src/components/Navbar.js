@@ -1,5 +1,5 @@
 import { ChartPieIcon, ChartSquareBarIcon, HomeIcon, MoonIcon, QuestionMarkCircleIcon, SunIcon } from "@heroicons/react/outline";
-import useDarkMode from "../useDarkMode";
+import useDarkMode from "../hooks/useDarkMode";
 import { Link } from 'react-router-dom';
 
 
@@ -17,24 +17,24 @@ function Navbar() {
             <div class="bg-slate-100 flex flex-col dark:bg-slate-800">
                 <div class="p-8 pt-12 cursor-pointer">
                     <Link to="/">
-                        <HomeIcon className="text-slate-400 h-8 " {...activeNavIcon('/')} />
+                        <HomeIcon className="text-slate-400 h-7 " {...activeNavIcon('/')} />
                     </Link>
                 </div>
                 <div class="p-8 cursor-pointer">
                     <Link to="/stats">
-                        <ChartPieIcon className="text-slate-400 h-8 " {...activeNavIcon('/stats')} />
+                        <ChartPieIcon className="text-slate-400 h-7 " {...activeNavIcon('/stats')} />
                     </Link>
                 </div>
                 <div class="p-8 cursor-pointer">
-                    <ChartSquareBarIcon className="text-slate-400 h-8" {...activeNavIcon('/report')} />
+                    <ChartSquareBarIcon className="text-slate-400 h-7" {...activeNavIcon('/report')} />
                 </div>
                 <div class="p-8 cursor-pointer">
-                    <QuestionMarkCircleIcon className="text-slate-400 h-8 " {...activeNavIcon('/about')} />
+                    <QuestionMarkCircleIcon className="text-slate-400 h-7 " {...activeNavIcon('/about')} />
                 </div>
                 <div class="p-8 cursor-pointer">
                     {colorTheme === "light" ?
-                        (<SunIcon className="text-yellow-400 h-8 " onClick={() => setTheme("light")} />) :
-                        (<MoonIcon className="text-slate-400 h-8 " onClick={() => setTheme("dark")} />)}
+                        (<SunIcon className="text-yellow-400 h-7 " onClick={() => setTheme("light")} />) :
+                        (<MoonIcon className="text-slate-400 h-7 " onClick={() => setTheme("dark")} />)}
 
                 </div>
             </div>
