@@ -24,9 +24,9 @@ function Search() {
     <>
       <div className="flex flex-col relative w-full mt-4">
         <label className="self-center mb-8 text-slate-400 dark:text-slate-500 text-sm">
-          Search your district or dam
+          Search by district or dams
         </label>
-        <div className="line fadeInUp"></div>
+        <div className="line"></div>
 
         <div className="relative w-full">
           <input
@@ -40,7 +40,7 @@ function Search() {
             drop-shadow-lg rounded outline-none dark:bg-slate-800"
           />
 
-          {!expand && searchValue === "" && (<span className="absolute top-5 left-16 text-slate-400 dark:text-slate-500 text-base">Maharashtra district</span>
+          {!expand && searchValue === "" && (<span className="absolute top-5 left-16 text-slate-400 dark:text-slate-500 text-base"></span>
           )}
           <div className="">
             <SearchIcon className="absolute top-5 text-slate-400 dark:text-slate-500 left-4 h-6" />
