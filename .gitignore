@@ -46,7 +46,6 @@ jspm_packages/
 .firebase/
 firebase-debug.log
 .firebaserc
-firebase.json
 
 # hosting
 /hosting/.env*
