@@ -1,6 +1,7 @@
 {
   "short_name": "Maharashtra Dams",
   "name": "Maharashtra Dams",
+  "description":"To view the live storage of dams in the state",
   "icons": [
     {
       "src": "favicon.ico",
