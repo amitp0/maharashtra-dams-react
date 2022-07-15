@@ -1,6 +1,7 @@
 import { SearchIcon, XIcon } from "@heroicons/react/outline";
 import { useState, useCallback, useRef } from "react";
 import { useKeyPressEvent } from 'react-use';
+import { animated, config, useSpring } from '@react-spring/web';
 
 
 function Search() {
@@ -19,10 +20,21 @@ function Search() {
     handleClose();
     searchInput.current.blur();
   });
+  const searchStyle = useSpring({
+    from: {
+        y: 48,
+        opacity:0
+    },
+    to: {
+        y: 0,
+        opacity:1
+    },
+    config:config.stiff
+})
 
   return (
     <>
-      <div className="flex flex-col relative w-full mt-4">
+      <animated.div style={searchStyle} className="flex flex-col relative w-full mt-4">
         <label className="self-center mb-8 text-slate-400 dark:text-slate-500 text-sm">
           Search by district or dams
         </label>
@@ -47,14 +59,14 @@ function Search() {
           </div>
 
           {searchValue.length > 0 && (
-          <div className={`close-button`} onClick={handleClose}>
+          <div onClick={handleClose}>
             <XIcon className="absolute top-5 text-slate-400 dark:text-slate-500 cursor-pointer right-4 h-6"/>
           </div>
         )}
 
         </div>
 
-      </div>
+      </animated.div>
     </>);
 }
 export default Search;
